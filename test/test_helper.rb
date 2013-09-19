@@ -2,6 +2,13 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
+if ENV["RM_INFO"]
+  require 'minitest/reporters'
+  MiniTest::Reporters.use!
+else
+  require 'minitest/wscolor'
+end
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
