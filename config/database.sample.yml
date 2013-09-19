@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: country_region_city_development
+  pool: 5
+  username: country_region_city
+  password:
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: country_region_city_test
+  pool: 5
+  username: country_region_city
+  password:
+  min_messages: warning

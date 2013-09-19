@@ -2,7 +2,9 @@
 *.sassc
 .sass-cache
 capybara-*.html
-.rspec
+.ruby-version
+.ruby-gemset
+.idea
 /.bundle
 /vendor/bundle
 /log/*
@@ -10,7 +12,10 @@ capybara-*.html
 /db/*.sqlite3
 /public/system/*
 /coverage/
-/spec/tmp/*
 **.orig
 rerun.txt
-pickle-email-*.html
+/config/database.yml
+/config/env_vars_development.yml
+/config/env_vars_test.yml
+/config/env_vars_production.yml
+/config/env_vars_staging.yml
