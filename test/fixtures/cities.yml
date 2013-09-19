@@ -1,0 +1,13 @@
+guildford:
+  country_id: 1
+  region_id: 1
+  name: Guildford
+  latitude: 51.2167
+  longitude: -0.5667
+
+woking:
+  country_id: 1
+  region_id: 1
+  name: Woking
+  latitude: 51.3167
+  longitude: -0.5333

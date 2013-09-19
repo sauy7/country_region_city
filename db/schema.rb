@@ -11,6 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130919214658) do
 
+  create_table "cities", force: true do |t|
+    t.integer "country_id"
+    t.integer "region_id"
+    t.string  "name"
+    t.float   "latitude"
+    t.float   "longitude"
+  end
+
+  add_index "cities", ["country_id", "name"], name: "index_cities_on_country_id_and_name", using: :btree
+  add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
+  add_index "cities", ["name"], name: "index_cities_on_name", using: :btree
+  add_index "cities", ["region_id", "name"], name: "index_cities_on_region_id_and_name", using: :btree
+  add_index "cities", ["region_id"], name: "index_cities_on_region_id", using: :btree
+
+  create_table "countries", force: true do |t|
+    t.string "code"
+    t.string "name"
+  end
+
+  add_index "countries", ["name"], name: "index_countries_on_name", using: :btree
+
+  create_table "regions", force: true do |t|
+    t.integer "country_id"
+    t.string  "name"
+  end
+
+  add_index "regions", ["country_id", "name"], name: "index_regions_on_country_id_and_name", using: :btree
+  add_index "regions", ["country_id"], name: "index_regions_on_country_id", using: :btree
 end
